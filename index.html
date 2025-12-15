@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Website</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .container {
+            display: flex;
+            padding: 20px;
+            gap: 20px;
+        }
+
+        .box {
+            flex: 1;
+            background: #f2f2f2;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* 📱 GSM */
+        @media (max-width: 600px) {
+            .container {
+                flex-direction: column;
+            }
+        }
+
+        /* 📱 Tablet */
+        @media (min-width: 601px) and (max-width: 1024px) {
+            .container {
+                flex-direction: row;
+            }
+        }
+
+        /* 🖥️ PC */
+        @media (min-width: 1025px) {
+            .container {
+                max-width: 1200px;
+                margin: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Mijn Responsive Site</h1>
+</header>
+
+<div class="container">
+    <div class="box">Blok 1</div>
+    <div class="box">Blok 2</div>
+    <div class="box">Blok 3</div>
+</div>
+
+</body>
+</html>
+
